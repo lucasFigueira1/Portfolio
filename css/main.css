@@ -8488,7 +8488,8 @@ header nav {
     position: absolute;
     bottom: 0;
     display: flex;
-    gap: 1.3rem; }
+    gap: 1.3rem;
+    z-index: 100; }
     .first-content-bg .main-socials-section a {
       text-decoration: none;
       color: #fff;
