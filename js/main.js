@@ -83,3 +83,25 @@ for (let i = 0; i < arrowBack.length; i++) {
   });
 }
 
+// SCROLL REVEAL ANIMATION
+
+const sr = ScrollReveal({
+  origin: 'top',
+  distance: '60px',
+  duration: '2500',
+  delay: '400'
+})
+
+sr.reveal(`.first-content-text`)
+sr.reveal(`.aboutme-text`, {origin: 'left'})
+sr.reveal(`.mypicture`, {origin: 'right'})
+sr.reveal(`.project-image`, {origin: 'left'})
+sr.reveal(`.project-text`, {origin: 'right'})
+sr.reveal(`.ca-btn-01`, {origin: 'left'})
+sr.reveal(`.ca-btn-02`, {origin: 'top'})
+sr.reveal(`.ca-btn-03`, {origin: 'left'})
+
+
+
+
+

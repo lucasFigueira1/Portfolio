@@ -17,142 +17,180 @@
       color: $main-bg;
     }
   }
-  .project-cards-container {
-    flex-direction: column;
-    margin: 1rem 0;
-    gap: 1.5rem;
-    .project-card {
+  .row {
+    margin-bottom: 1rem;
+    gap: 1rem;
+    a {
+      text-decoration: none;
+    }
+    figure {
       display: grid;
-      gap: 1rem;
-      grid-template-areas:
-        "pimg"
-        "ptext";
-      .img-div {
+      grid-template: "stack";
+      margin: 0 !important;
+      img {
+        border-radius: 9px;
         width: 100%;
-        grid-area: pimg;
-        // height: 182px;
-        a {
-          text-decoration: none;
+        height: 182px;
+      }
+      & > * {
+        grid-area: stack;
+      }
+      figcaption {
+        border-radius: 9px;
+        border: 1px solid $main-bg;
+        background-color: rgba(51, 53, 51, 0.82);
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h4 {
+          color: $main-bg;
+          font-size: 16px;
         }
-        figure {
-          display: grid;
-          grid-template: "stack";
-          margin: 0 !important;
-          & > * {
-            grid-area: stack;
-          }
-          img {
-            object-fit: cover;
-            aspect-ratio: 16/9;
-            height: 100%;
-            width: 100%;
-            border-radius: 9px;
-          }
-          figcaption {
-            border-radius: 9px;
-            border: 1px solid $main-bg;
-            background-color: rgba(51, 53, 51, 0.82);
-            opacity: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            h4 {
-              color: $main-bg;
-              font-size: 16px;
-            }
-            h2 {
-              color: $main-bg;
-              font-size: 22px;
-              border: none !important;
-              margin-bottom: 4px !important;
-            }
-          }
+        h2 {
+          color: $main-bg;
+          font-size: 22px;
+          border: none !important;
+          margin-bottom: 4px !important;
         }
       }
-      .project-text {
-        grid-area: ptext;
-        width: 100%;
-        height: auto;
-        text-align: start;
-        p {
+    }
+    .project-text {
+      text-align: initial;
+      p {
+        font-size: 0.85rem;
+        color: #fff;
+      }
+      .tools-used {
+        span {
+          font-size: 0.85rem;
           color: #fff;
-          font-size: 14px;
+          border: 1px solid #fff;
+          border-radius: 5px;
+          padding: 2px 6px;
         }
-        .tools-used {
-          width: 100%;
-          display: flex;
-          flex-direction: row;
-          height: auto;
-          gap: 11px;
-          span {
-            border-radius: 5px;
-            padding: 2px 4px;
-            display: inline;
-            color: #fff;
-            font-size: 11px;
-            width: auto;
-            border: 1px solid #fff;
+      }
+    }
+  }
+}
+@media screen and (min-width: 476px) {
+  #projects {
+    .project-cards-container {
+      .row {
+        .img-div {
+          a {
+            figure {
+              img {
+                height: 260px;
+              }
+            }
           }
         }
       }
     }
   }
 }
-
-@media (min-width: 576px) {
-  // Projects Section
-  .projects-container {
-    padding: 1.5rem !important;
+@media screen and (min-width: 768px) {
+  #projects {
+    .project-cards-container {
+      .row {
+        .img-div {
+          a {
+            figure {
+              img {
+                height: 300px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
-@media (min-width: 992px) {
-  // Projects
-  .projects-container {
-    padding: 2rem !important;
-  }
+@media screen and (min-width: 992px) {
   #projects {
-    margin-top: 15rem;
-    margin-bottom: 15rem;
     .project-cards-container {
-      gap: 1.5rem;
       margin-top: 2rem;
-      .project-card {
-        grid-template-areas: "pimg ptext";
-        // flex-direction: row;
-        // height: 310px;
+      .row {
+        display: grid;
+        grid-template-columns: 460px 440px;
+        column-gap: 1rem;
         .img-div {
-          figure {
-            cursor: pointer;
-            display: grid;
-            grid-template: "stack";
-            & > * {
-              grid-area: stack;
-            }
-            img {
-              max-width: 480px;
-            }
-            figcaption {
-              opacity: 0;
-              transition: opacity 200ms;
-            }
-            &:hover {
+          a {
+            figure {
+              cursor: pointer;
+              display: grid;
+              grid-template: "stack";
+              & > * {
+                grid-area: stack;
+              }
+              img {
+                width: 460px;
+              }
               figcaption {
-                opacity: 1;
+                opacity: 0;
+                transition: opacity 200ms;
+              }
+              &:hover {
+                figcaption {
+                  opacity: 1;
+                }
               }
             }
           }
         }
         .project-text {
-          min-width: 400px;
-          margin-top: 10px;
+          display: flex;
+          flex-direction: column;
           p {
-            font-size: 16px;
-            margin-bottom: 2rem;
+            font-size: 1rem;
+            padding-left: 4px;
+            padding-top: 6px;
           }
           .tools-used {
+            margin-top: 1rem;
+            gap: .25rem;
             span {
-              font-size: 12px;
+              letter-spacing: 0.03rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  #projects {
+    .project-cards-container {
+      .row {
+        grid-template-columns: 520px 540px;
+        .img-div {
+          a {
+            figure {
+              img {
+                width: 520px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1400px) {
+  #projects {
+    .project-cards-container {
+      .row {
+        grid-template-columns: 600px 540px;
+        justify-content: center;
+        .img-div {
+          a {
+            figure {
+              img {
+                width: 600px;
+                height: 340px;
+              }
             }
           }
         }
