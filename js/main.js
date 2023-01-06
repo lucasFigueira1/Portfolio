@@ -93,13 +93,13 @@ const sr = ScrollReveal({
 })
 
 sr.reveal(`.first-content-text`)
-sr.reveal(`.aboutme-text`, {origin: 'left'})
-sr.reveal(`.mypicture`, {origin: 'right'})
-sr.reveal(`.project-image`, {origin: 'left'})
-sr.reveal(`.project-text`, {origin: 'right'})
-sr.reveal(`.ca-btn-01`, {origin: 'left'})
-sr.reveal(`.ca-btn-02`, {origin: 'top'})
-sr.reveal(`.ca-btn-03`, {origin: 'left'})
+sr.reveal(`.aboutme-text`)
+sr.reveal(`.mypicture`)
+sr.reveal(`.project-image`)
+sr.reveal(`.project-text`)
+sr.reveal(`.ca-btn-01`)
+sr.reveal(`.ca-btn-02`)
+sr.reveal(`.ca-btn-03`)
 
 
 
