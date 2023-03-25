@@ -9154,6 +9154,10 @@ footer {
     border-bottom: 2px solid #f5cb5c; }
     #projects h2 span, #projects .h2 span {
       color: #f5cb5c; }
+  #projects .projects-see-more-text {
+    color: #f5cb5c;
+    text-decoration: none;
+    font-size: 1.2rem; }
   #projects .row {
     margin-bottom: 1rem;
     gap: 1rem; }
